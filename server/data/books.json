@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Atomic Habits",
+        "author": "James Clear",
+        "description": "An easy and proven way to build good habits and break bad ones. This book will teach you how to make time for new habits (even when life gets crazy), overcome a lack of motivation and willpower, design your environment to make success easier, get back on track when you fall off course, and much more.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg",
+        "genres": ["Self-help", "Non-fiction"],
+        "comments": []
+    },
+    {
+        "id": 2,
+        "name": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "description": "The Lord of the Rings is an epic high-fantasy novel written by English author and scholar J. R. R. Tolkien. The story began as a sequel to Tolkien's 1937 fantasy novel The Hobbit, but eventually developed into a much larger work.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566425108i/33.jpg",
+        "genres": ["Fantasy", "Adventure", "Epic"],
+        "comments": []
+    },
+    {
+        "id": 3,
+        "name": "The Alchemist",
+        "author": "Paulo Coelho",
+        "description": "The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
+        "genres": ["Fiction", "Fantasy", "Philosophy"],
+        "comments": []
+    },
+    {
+        "id": 4,
+        "name": "The Count of Monte Cristo",
+        "author": "Alexandre Dumas",
+        "description": "The Count of Monte Cristo is an adventure novel by French author Alexandre Dumas (père) completed in 1844. It is one of the author's more popular works, along with The Three Musketeers. Like many of his novels, it is expanded from the plot outlines suggested by his collaborating ghostwriter Auguste Maquet.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1611834134i/7126.jpg",
+        "genres": ["Adventure", "Historical Fiction"],
+        "comments": []
+    },
+    {
+        "id": 5,
+        "name": "Romeo and Juliet",
+        "author": "William Shakespeare",
+        "description": "Romeo and Juliet is a tragedy written by William Shakespeare early in his career about two young star-crossed lovers whose deaths ultimately reconcile their feuding families. It was among Shakespeare's most popular plays during his lifetime and, along with Hamlet, is one of his most frequently performed plays.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629680008i/18135.jpg",
+        "genres": ["Tragedy", "Drama"],
+        "comments": []
+    },
+    {
+        "id": 6,
+        "name": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "description": "Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598823299i/42844155.jpg",
+        "genres": ["Fantasy", "Young Adult"],
+        "comments": []
+    },
+    {
+        "id": 7,
+        "name": "1984",
+        "author": "George Orwell",
+        "description": "1984 is a dystopian social science fiction novel by English novelist George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime. Thematically, 1984 centres on the consequences of totalitarianism, mass surveillance, and repressive regimentation of persons and behaviours within society.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1657781256i/61439040.jpg",
+        "genres": ["Dystopian", "Science Fiction"],
+        "comments": []
+    },
+    {
+        "id": 8,
+        "name": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "description": "Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320399351i/1885.jpg",
+        "genres": ["Romance", "Classic"],
+        "comments": []
+    },
+    {
+        "id": 9,
+        "name": "Rich Dad Poor Dad",
+        "author": "Robert T. Kiyosaki",
+        "description": "Rich Dad Poor Dad is a 1997 book written by Robert Kiyosaki and Sharon Lechter. It advocates the importance of financial literacy, financial independence and building wealth through investing in assets, real estate investing, starting and owning businesses, as well as increasing one's financial intelligence to improve one's business and financial aptitude.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388211242i/69571.jpg",
+        "genres": ["Self-help", "Non-fiction"],
+        "comments": []
+    },
+    {
+        "id": 10,
+        "name": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490528560i/4671.jpg",
+        "genres": ["Classic", "Romance"],
+        "comments": []
+    }
+]

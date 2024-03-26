@@ -1,0 +1,17 @@
+.book-container {
+    padding: 50px 70px;
+    gap: 30px;
+}
+
+.book-container img {
+    height: 450px;
+    border-radius: 8px;
+}
+
+.book-container span {
+    font-style: italic;
+}
+
+.book-container button {
+    padding: 8px 12px;
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --blue: #1d4ed8;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+input {
+    border-radius: 8px;
+    outline: none;
+}

@@ -1,0 +1,31 @@
+.signin-form {
+    padding: 30px;
+    width: 420px;
+    min-height: 350px;
+    border-radius: 16px;
+    background-color: var(--white);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signin-form > input {
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid var(--blue);
+}
+
+.signin-form > button {
+    padding: 8px 16px;
+    width: 100%;
+}
+
+.form-navigate {
+    color: var(--black);
+    background: transparent;
+}
+
+
