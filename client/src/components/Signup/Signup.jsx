@@ -1,12 +1,12 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import BookContext from "../../context/BookContext";
-import axios from "axios";
+import { useUserContext } from "../../context/UserContext";
+import useFetchData from "../../functions/FetchData";
 import "./Signup.css";
 
 function Signup({ setSignup }) {
     const navigate = useNavigate();
-    const { setCurrentUser } = useContext(BookContext);
+    const { setCurrentUser } = useUserContext();
     const [form, setForm] = useState("signup");
     const [users, setUsers] = useState([]);
 
@@ -24,18 +24,10 @@ function Signup({ setSignup }) {
         event.target.reset();
     }
 
-    async function fetchData(url) {
-        try {
-            const res = await axios.get(url);
-            setUsers(res.data);
-        }
-        catch (err) {
-            console.log(err);
-        }
-    }
-
     useEffect(() => {
-        fetchData("http://localhost:5000/users");
+        useFetchData("http://localhost:5000/users", (data) => {
+            setUsers(data);
+        });
     }, []);
 
     const handleSignIn = async (event) => {

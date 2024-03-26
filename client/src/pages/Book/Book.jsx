@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+import useFetchData from "../../functions/FetchData";
 import "./book.css";
 
 function Book() {
@@ -8,18 +8,10 @@ function Book() {
     const navigate = useNavigate();
     const [book, setBook] = useState(null);
 
-    async function fetchData(url) {
-        try {
-            const res = await axios.get(url);
-            setBook(res.data);
-        }
-        catch (err) {
-            console.log(err);
-        }
-    }
-
     useEffect(() => {
-        fetchData(`http://localhost:5000/books/${requestedBook.id}`);
+        useFetchData(`http://localhost:5000/books/${requestedBook.id}`, (data) => {
+            setBook(data);
+        });
     }, [requestedBook]);
 
     return (

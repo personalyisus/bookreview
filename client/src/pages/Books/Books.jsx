@@ -1,32 +1,18 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import BookContext from "../../context/BookContext";
+import { useBookContext } from "../../context/BookContext";
 import BooksCard from "../../components/BooksCard/BooksCard";
 import useFetchData from "../../functions/FetchData";
 import "./books.css";
 
 function Books() {
     const navigate = useNavigate();
+    const { search } = useBookContext();
+
     const [books, setBooks] = useState([]);
     const [filteredBooks, setFilteredBooks] = useState([]);
 
-    const { search } = useContext(BookContext);
-
-    // async function fetchData(url) {
-    //     try {
-    //         const res = await axios.get(url);
-    //         setBooks(res.data);
-    //         setFilteredBooks(res.data);
-    //     }
-    //     catch (err) {
-    //         console.log(err);
-    //     }
-    // }
-
     useEffect(() => {
-        // fetchData(`http://localhost:5000/books`);
-
         useFetchData(`http://localhost:5000/books`, (data) => {
             setBooks(data);
             setFilteredBooks(data);

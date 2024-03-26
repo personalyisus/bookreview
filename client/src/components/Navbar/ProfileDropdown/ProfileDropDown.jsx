@@ -1,14 +1,12 @@
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import BookContext from "../../../context/BookContext";
+import { useUserContext } from "../../../context/UserContext";
 import "./ProfileDropdown.css";
 
 const dropdown = ["Profile", "Books", "Accesibility", "Settings"];
 
 function ProfileDropDown() {
     const navigate = useNavigate();
-
-    const { setCurrentUser } = useContext(BookContext);
+    const { setCurrentUser } = useUserContext();
 
     const handleSignout = () => {
         setCurrentUser(null);

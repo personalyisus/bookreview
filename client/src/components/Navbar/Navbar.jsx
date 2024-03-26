@@ -1,13 +1,16 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import BookContext from "../../context/BookContext";
+import { useUserContext } from "../../context/UserContext";
+import { useBookContext } from "../../context/BookContext";
 import Signup from "../Signup";
 import ProfileDropDown from "./ProfileDropdown/ProfileDropDown";
 import "./navbar.css";
 
 function Navbar() {
+    const { setSearch } = useBookContext();
+    const { currentUser } = useUserContext();
+
     const [signup, setSignup] = useState(false);
-    const { setSearch, currentUser } = useContext(BookContext);
     const [drowdown, setDropdown] = useState(false);
 
     const handleSearch = (event) => {
@@ -32,7 +35,7 @@ function Navbar() {
 
                     {currentUser ? (
                         <div onClick={() => setDropdown(!drowdown)} className="profile flex align-center justify-center">
-                            <h2>{currentUser?.firstName.charAt(0).toUpperCase()}</h2>
+                            <h2>{currentUser?.firstName?.charAt(0).toUpperCase()}</h2>
                             
                             {drowdown 
                             ? <ProfileDropDown />

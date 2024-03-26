@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import BookContext from "../../context/BookContext";
+import { useUserContext } from "../../context/UserContext";
 
 function Home() {
-    const { currentUser } = useContext(BookContext);
+    const { currentUser } = useUserContext();
     return (
         <div>
             Welcome {currentUser?.firstName} 
