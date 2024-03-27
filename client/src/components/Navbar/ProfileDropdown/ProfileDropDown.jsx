@@ -6,12 +6,21 @@ const dropdown = ["Profile", "Books", "Accesibility", "Settings"];
 
 function ProfileDropDown() {
     const navigate = useNavigate();
-    const { setCurrentUser } = useUserContext();
+    const { currentUser, setCurrentUser } = useUserContext();
 
-    const handleSignout = () => {
+    const handleSignout = async () => {
+        const res = await fetch("http://localhost:5000/signout", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: currentUser.id })
+        });
+
+        const data = await res.json();
+
+
         setCurrentUser(null);
         localStorage.setItem("currentUser", null);
-        navigate("/");
+        navigate("/signin");
     }
 
     return (

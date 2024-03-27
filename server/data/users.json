@@ -4,34 +4,62 @@
     "firstName": "Robert",
     "lastName": "Smith",
     "email": "robert@gmail.com",
-    "password": "1"
+    "profileColor": "#1d4ed8",
+    "password": "1",
+    "token": false
   },
   {
     "firstName": "Bobur",
     "lastName": "Abdukarimov",
     "email": "bobur@gmail.com",
     "password": "1",
-    "id": "9e59caf6-976f-4f97-912b-96b73f0f4d10"
-  },
-  {
-    "firstName": "Alex",
-    "lastName": "Smith",
-    "email": "alex@gmail.com",
-    "password": "2",
-    "id": "3e4413b2-c4ee-44f8-8114-0ec2adc42655"
-  },
-  {
-    "firstName": "John",
-    "lastName": "Smith",
-    "email": "john@gmail.com",
-    "password": "john",
-    "id": "a031ec86-58e3-498f-98ed-33daa513fddc"
+    "profileColor": "#1d4ed8",
+    "id": "9e59caf6-976f-4f97-912b-96b73f0f4d10",
+    "token": false
   },
   {
     "firstName": "Suzy",
     "lastName": "Bae",
     "email": "skuukzky@gmail.com",
     "password": "suzy",
-    "id": "b626da58-1a82-486d-bc8e-09f46177005c"
+    "profileColor": "#1d4ed8",
+    "id": "b626da58-1a82-486d-bc8e-09f46177005c",
+    "token": false
+  },
+  {
+    "firstName": "Millie",
+    "lastName": "Brown",
+    "email": "brown@gmail.com",
+    "password": "brown",
+    "id": "0e948a76-5023-4e7e-a924-3f7f5cfcafe3",
+    "profileColor": "#a855f7",
+    "token": false
+  },
+  {
+    "firstName": "Muhammadbobur ",
+    "lastName": "Abdukarimov",
+    "email": "bobur@gmail.com",
+    "password": "3",
+    "id": "4e2a77dc-d5e0-4cff-ada5-0c029bfdf97b",
+    "profileColor": "#22c55e",
+    "token": false
+  },
+  {
+    "firstName": "Dalmi",
+    "lastName": "Seo",
+    "email": "seoDalmi@gmail.com",
+    "password": "777",
+    "id": "ca9aa196-9a51-4741-ab1b-ff54ec6d7b85",
+    "profileColor": "#1d4ed8",
+    "token": false
+  },
+  {
+    "firstName": "Bobomurod",
+    "lastName": "Abdulhaev",
+    "email": "bobo@gmail.com",
+    "password": "b",
+    "id": "9976efa4-3a8e-405e-8ac3-3c821cd06fc2",
+    "profileColor": "#67e8f9",
+    "token": false
   }
 ]

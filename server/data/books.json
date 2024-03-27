@@ -54,7 +54,14 @@
       "Fantasy",
       "Philosophy"
     ],
-    "comments": []
+    "comments": [
+      {
+        "comment": "bomagan kitob",
+        "email": "mills@gmail.com",
+        "id": "c891a44c-dc7c-4666-a79a-ada7a59c988d",
+        "likes": 1000000
+      }
+    ]
   },
   {
     "id": 4,
@@ -101,6 +108,12 @@
         "comment": "hermione <3",
         "email": "skuukzky@gmail.com",
         "id": "36b3a956-b274-42e5-a4df-42e3f5e22eb0",
+        "likes": 0
+      },
+      {
+        "comment": "harry potter zor ekan",
+        "email": "skuukzky@gmail.com",
+        "id": "231ec4a8-b204-4900-b22f-34425d4ee6c5",
         "likes": 0
       }
     ]

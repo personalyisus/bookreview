@@ -6,6 +6,12 @@ const { v4: uuidv4 } = require("uuid");
 const books = require("../data/books.json");
 const users = require("../data/users.json");
 
+const arrColors = ["#a855f7", "#1d4ed8", "#e11d48", "#22c55e", "#67e8f9", "#f472b6"];
+
+function randomColor(arr) {
+    return arrColors[Math.floor(Math.random() * arr.length)];
+}
+
 const router = express.Router();
 
 router.get("/books", (req, res) => {
@@ -47,7 +53,7 @@ router.get("/users", (req, res) => {
 
 router.post("/signup", (req, res) => {
     const formData = req.body;
-    const user = { ...formData, id: uuidv4() };
+    const user = { ...formData, id: uuidv4(), profileColor: randomColor(arrColors), token: false };
     users.push(user);
 
     fs.writeFile(path.join(__dirname, "../data/users.json"), JSON.stringify(users, null, 2), (err) => {
@@ -57,6 +63,48 @@ router.post("/signup", (req, res) => {
         }
     });
     res.status(201).json(user);
+});
+
+router.post("/signin", (req, res) => {
+    const { email, password } = req.body;
+    const user = users.find(user => user.email === email && user.password === password);
+
+    if (!user) {
+        res.status(404).json({ message: "User not found" });
+        return;
+    }
+
+    user.token = true;
+
+    fs.writeFile(path.join(__dirname, "../data/users.json"), JSON.stringify(users, null, 2), (err) => {
+        if (err) {
+            res.status(500).json({ message: "Error with signing in! Check your email and password" });
+            return;
+        }
+    });
+
+    res.status(200).json(user);
+});
+
+router.post("/signout", (req, res) => {
+    const { id } = req.body;
+    const user = users.find(user => user.id === id);
+
+    if (!user) {
+        res.status(404).json({ message: "User not found" });
+        return;
+    }
+
+    user.token = false;
+
+    fs.writeFile(path.join(__dirname, "../data/users.json"), JSON.stringify(users, null, 2), (err) => {
+        if (err) {
+            res.status(500).json({ message: "Error with signing out. Try again!" });
+            return;
+        }
+    });
+
+    res.status(200).json(user);
 });
 
 module.exports = router;

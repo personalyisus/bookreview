@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useUserContext } from "../../context/UserContext";
 import { useBookContext } from "../../context/BookContext";
 import { useTheme } from "../../context/ThemeContext";
-import Signup from "../Signup";
 import ProfileDropDown from "./ProfileDropdown/ProfileDropDown";
 import "./navbar.css";
 
@@ -11,11 +10,11 @@ import { FaSun } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa";
 
 function Navbar() {
+    const navigate = useNavigate();
     const { setSearch } = useBookContext();
     const { currentUser } = useUserContext();
     const { theme, handleTheme } = useTheme();
 
-    const [signup, setSignup] = useState(false);
     const [drowdown, setDropdown] = useState(false);
 
     const handleSearch = (event) => {
@@ -54,7 +53,7 @@ function Navbar() {
                     </NavLink>
 
                     {currentUser ? (
-                        <div onClick={() => setDropdown(!drowdown)} className="profile flex align-center justify-center">
+                        <div onClick={() => setDropdown(!drowdown)} style={{backgroundColor: currentUser.profileColor}} className="profile flex align-center justify-center">
                             <h2 onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>{profile}</h2>
                             
                             {drowdown 
@@ -64,7 +63,7 @@ function Navbar() {
 
                         </div>
                     )
-                    : <button onClick={() => setSignup(!signup)}>Sign Up</button>
+                    : <button onClick={() => navigate("/signin")}>Sign In</button>
                     }
 
                     <div className="theme-container">
@@ -75,8 +74,6 @@ function Navbar() {
 
                 </div>
             </nav>
-
-            {signup ? <Signup setSignup={setSignup}/> : null}            
         </>
     );
 }
