@@ -1,6 +1,5 @@
 .book-container {
-    padding: 50px 70px;
-    gap: 30px;
+    padding: 50px 100px;
 }
 
 .book-container img {
@@ -14,4 +13,44 @@
 
 .book-container button {
     padding: 8px 12px;
+}
+
+.comments-section {
+    margin-top: 50px;
+    padding: 50px 70px;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    border: 1px solid var(--border);
+    border-radius: 32px;
+    background-color: var(--primary-bg);
+}
+
+.comment-form {
+    width: 100%;
+}
+
+.comment-form > input {
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: transparent;
+}
+
+.comment-form > button {
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.comments-container {
+    width: 100%;    
+}
+
+.comment-card {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: var(--secondary-bg);
 }

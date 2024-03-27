@@ -1,8 +1,12 @@
 .books-card {
-    padding: 30px;
-    box-shadow: 0 0 1px var(--black);
+    padding: 20px;
+    box-shadow: 0 0 1px var(--border);
+    border-radius: 16px;
+    background-color: var(--secondary-bg);
 }
 
 .books-card img {
     height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
 }

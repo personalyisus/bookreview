@@ -49,8 +49,8 @@ function Signup({ setSignup }) {
     return (
         <>
             {form === "signup" && (
-                <form onSubmit={handleSignUp} className="signin-form flex flex-column align-center">
-                    <h1 className="color-blue mb-3">Sign Up Form</h1>
+                <form onSubmit={handleSignUp} className="form flex flex-column align-center">
+                    <h1 className="mb-3">Sign Up Form</h1>
                     <input name="firstName" type="text" placeholder="First Name" required />
                     <input name="lastName" type="text" placeholder="Last Name" required />
                     <input name="email" type="email" placeholder="Email" required />
@@ -60,8 +60,8 @@ function Signup({ setSignup }) {
                 </form>
             )}
             {form === "signin" && (
-                <form onSubmit={handleSignIn} className="signin-form flex flex-column align-center">
-                    <h1 className="color-blue mb-3">Sign In Form</h1>
+                <form onSubmit={handleSignIn} className="form flex flex-column align-center">
+                    <h1 className="mb-3">Sign In Form</h1>
                     <input name="email" type="email" placeholder="Email" required />
                     <input name="password" type="password" placeholder="Password" required />
                     <p>Do not have account? <button onClick={() => setForm("signup")} className="form-navigate">Sign Up</button></p>

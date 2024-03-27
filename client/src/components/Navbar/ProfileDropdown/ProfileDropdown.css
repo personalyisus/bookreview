@@ -1,11 +1,11 @@
 .dropdown {
-    color: var(--black);
+    color: var(--text-color);
     padding: 10px;
     width: 160px;
     min-height: 220px;
     border-radius: 8px;
-    background-color: var(--white);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-bg);
+    box-shadow: 0 0 1px var(--border);
     position: absolute;
     top: calc(100% + 10px);
 }

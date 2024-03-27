@@ -1,9 +1,9 @@
-.signin-form {
+.form {
     padding: 30px;
     width: 420px;
     min-height: 350px;
     border-radius: 16px;
-    background-color: var(--white);
+    background-color: var(--primary-bg);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 50%;
@@ -11,21 +11,27 @@
     transform: translate(-50%, -50%);
 }
 
-.signin-form > input {
+.form > input {
+    color: var(--text-color);
     margin-bottom: 10px;
     padding: 8px 16px;
     width: 100%;
-    border: 1px solid var(--blue);
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    border-radius: 4px;
+    background: transparent;
 }
 
-.signin-form > button {
+.form > button {
     padding: 8px 16px;
     width: 100%;
 }
 
-.form-navigate {
-    color: var(--black);
-    background: transparent;
+.form > p {
+    color: var(--text-color);
 }
 
-
+.form-navigate {
+    color: var(--text-color);
+    background: transparent;
+}

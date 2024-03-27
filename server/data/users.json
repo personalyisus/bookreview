@@ -26,5 +26,12 @@
     "email": "john@gmail.com",
     "password": "john",
     "id": "a031ec86-58e3-498f-98ed-33daa513fddc"
+  },
+  {
+    "firstName": "Suzy",
+    "lastName": "Bae",
+    "email": "skuukzky@gmail.com",
+    "password": "suzy",
+    "id": "b626da58-1a82-486d-bc8e-09f46177005c"
   }
 ]

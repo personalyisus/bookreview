@@ -9,6 +9,47 @@
     --white: #fff;
     --black: #000;
     --blue: #1d4ed8;
+    --nav-link: #000;
+    --border: var(--black);
+    --text-color: var(--black);
+    --slate-900: #0f172a;
+    --slate-100: #f1f5f9;
+    --primary-bg: var(--slate-100);
+    --secondary-bg: var(--white);
+}
+
+.dark {
+    color: var(--white);
+    background-color: var(--black);
+    --nav-link: #fff;
+    --border: var(--white);
+    --text-color: var(--white);
+    --primary-bg: var(--slate-900);
+    --secondary-bg: var(--black);
+}
+
+.light {
+    color: var(--black);
+    background-color: var(--white);
+    --nav-link: #000;
+    --border: var(--black);
+    --text-color: var(--black);
+    --primary-bg: var(--slate-100);
+    --secondary-bg: var(--white);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-bg);
+    border-radius: 20px;
+    border: 3px solid var(--secondary-bg);
 }
 
 a {
@@ -27,6 +68,5 @@ button {
 }
 
 input {
-    border-radius: 8px;
     outline: none;
 }
