@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useFetchData from "../../functions/FetchData";
-import "./book.css";
 import { useUserContext } from "../../context/UserContext";
+import BookContainer from "../../components/BookContainer/BookContainer";
+import CommentForm from "../../components/Form/CommentForm/CommentForm";
+import CommentCard from "../../components/CommentCard";
+import "./book.css";
 
 function Book() {
     const requestedBook = useParams();
@@ -45,49 +48,53 @@ function Book() {
         event.target.reset();
     }
 
+
+
+
+    const [liked, setLiked] = useState(false);
+
+    const handleLike = async (id) => {
+        let comment = book.comments.find(comment => comment.id === id);
+        console.log(comment)
+
+        if (liked) {
+            setLiked(false);
+            comment.likes--;
+        }
+        else {
+            setLiked(true);
+            comment.likes++;
+        }
+
+        const res = await fetch(`http://localhost:5000/books/${book.id}/comments/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ likes: comment.likes })
+        });
+
+        if (!res.ok) {
+            console.error("Error:", res.statusText);
+        }
+    }
+
+
     return (
         <div className="book-container">
-            <div className="flex g-3">
-                <div>
-                    <img src={book?.image} alt={book?.name} />
-                </div>
-                <div>
-                    <h1>{book?.name} by {book?.author}</h1>
-                    <div className="mb-3 flex g-1">
-                        {book?.genres.map(genre => (
-                            <span key={genre}>{genre}</span>
-                            ))}
-                    </div>
-                    <p className="mb-3">{book?.description}</p>
-                    <button onClick={() => navigate("/books")}>Go Back</button>
-                </div>
-            </div>
+            
+            <BookContainer book={book} />
 
             <div className="comments-section flex flex-column align-center ">
-                
-                <form onSubmit={handleComment} className="comment-form mb-3 flex">
-                    <input name="comment" type="text" placeholder="Write your comment here..." />
-                    <button type="submit">Comment</button>
-                </form>
+                <CommentForm handleComment={handleComment} />
 
                 <div className="comments-container flex flex-column g-3">
                     {book?.comments.length > 0 ? (
                         book?.comments.map(comment => (
-                            <div className="comment-card flex align-end justify-space-between" key={comment.id}>
-                                <div>
-                                    <h4>{comment.email}</h4>
-                                    <p>{comment.comment}</p>
-                                </div>
-                                <div>
-                                    <p>Likes: {comment.likes}</p>
-                                </div>
-                            </div>
+                            <CommentCard comment={comment} handleLike={handleLike} key={comment.id} />
                         ))
                     ) 
                     : null
                     }
                 </div>
-
             </div>
         </div>
     );

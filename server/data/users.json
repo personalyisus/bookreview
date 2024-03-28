@@ -61,5 +61,14 @@
     "id": "9976efa4-3a8e-405e-8ac3-3c821cd06fc2",
     "profileColor": "#67e8f9",
     "token": false
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Abdukarimov",
+    "email": "roberimov@gmail.com",
+    "password": "robert",
+    "id": "9816644d-064f-4a8d-93a9-63d1ce094015",
+    "profileColor": "#22c55e",
+    "token": true
   }
 ]

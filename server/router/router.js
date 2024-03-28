@@ -20,7 +20,7 @@ router.get("/books", (req, res) => {
 
 router.get("/books/:id", (req, res) => {
     const id = req.params.id;
-    const requestedBook = books.find(book => String(book.id) === id);
+    const requestedBook = books.find(book => book.id === id);
     res.json(requestedBook);
 });
 
@@ -29,7 +29,7 @@ router.post("/books/:id", (req, res) => {
     const id = req.params.id;
     const comment = { ...newComment, id: uuidv4(), likes: 0 };
     
-    let book = books.find(book => String(book.id) === id);
+    let book = books.find(book => book.id === id);
 
     if (!book) {
         res.status(404).json({ message: "Book not found" });
@@ -105,6 +105,37 @@ router.post("/signout", (req, res) => {
     });
 
     res.status(200).json(user);
+});
+
+router.put("/books/:bookId/comments/:commentId", (req, res) => {
+    const { bookId, commentId } = req.params;
+    const { likes } = req.body;
+
+    console.log(bookId, commentId, likes)
+
+    let book = books.find(book => book.id === bookId);
+    if (!book) {
+        res.status(404).json({ message: "Book not found" });
+        return;
+    }
+
+    let comment = book.comments.find(comment => comment.id === commentId);
+    if (!comment) {
+        res.status(404).json({ message: "Comment not found" });
+        return;
+    }
+
+    comment.likes = likes;
+
+    fs.writeFile(path.join(__dirname, "../data/books.json"), JSON.stringify(books, null, 2), (err) => {
+        if (err) {
+            res.status(500).json({ message: "Error with updating the comment" });
+            return;
+        }
+    });
+
+    res.status(200).json(comment);
+
 });
 
 module.exports = router;

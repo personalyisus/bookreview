@@ -26,31 +26,6 @@
     background-color: var(--primary-bg);
 }
 
-.comment-form {
-    width: 100%;
-}
-
-.comment-form > input {
-    padding: 8px 16px;
-    width: 100%;
-    border: 1px solid var(--border);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    background: transparent;
-}
-
-.comment-form > button {
-    border-radius: 0;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
 .comments-container {
     width: 100%;    
-}
-
-.comment-card {
-    padding: 8px 16px;
-    border-radius: 8px;
-    background-color: var(--secondary-bg);
 }

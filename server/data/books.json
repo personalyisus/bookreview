@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Atomic Habits",
     "author": "James Clear",
     "description": "An easy and proven way to build good habits and break bad ones. This book will teach you how to make time for new habits (even when life gets crazy), overcome a lack of motivation and willpower, design your environment to make success easier, get back on track when you fall off course, and much more.",
@@ -14,7 +14,7 @@
         "id": "ghoe93341mdewlo",
         "email": "robert@gmail.com",
         "comment": "This book is amazing. I have learned so much from it.",
-        "likes": 5
+        "likes": 6
       },
       {
         "id": "fej03i0r9fe",
@@ -26,12 +26,30 @@
         "comment": "i liked this book",
         "email": "robert@gmail.com",
         "id": "0d6cd7b8-98f4-4bcb-a7eb-7ecd21724bd7",
+        "likes": 2
+      },
+      {
+        "comment": "i liked this book",
+        "email": "skuukzky@gmail.com",
+        "id": "46de5d69-fe77-4b20-9f35-f9b24bfa3100",
+        "likes": 0
+      },
+      {
+        "comment": "hi",
+        "email": "skuukzky@gmail.com",
+        "id": "ea6677e5-bacb-4761-aaf8-57e61d8bf68b",
+        "likes": 3
+      },
+      {
+        "comment": "hello",
+        "email": "roberimov@gmail.com",
+        "id": "c4c98290-b3f2-47ac-bd9d-ff1be4b6723d",
         "likes": 0
       }
     ]
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "The Lord of the Rings",
     "author": "J.R.R. Tolkien",
     "description": "The Lord of the Rings is an epic high-fantasy novel written by English author and scholar J. R. R. Tolkien. The story began as a sequel to Tolkien's 1937 fantasy novel The Hobbit, but eventually developed into a much larger work.",
@@ -44,7 +62,7 @@
     "comments": []
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "The Alchemist",
     "author": "Paulo Coelho",
     "description": "The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.",
@@ -60,11 +78,17 @@
         "email": "mills@gmail.com",
         "id": "c891a44c-dc7c-4666-a79a-ada7a59c988d",
         "likes": 1000000
+      },
+      {
+        "comment": "no this is the best book ever",
+        "email": "roberimov@gmail.com",
+        "id": "f367fd8e-e035-41f9-823c-51925f7b5f43",
+        "likes": 0
       }
     ]
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "The Count of Monte Cristo",
     "author": "Alexandre Dumas",
     "description": "The Count of Monte Cristo is an adventure novel by French author Alexandre Dumas (père) completed in 1844. It is one of the author's more popular works, along with The Three Musketeers. Like many of his novels, it is expanded from the plot outlines suggested by his collaborating ghostwriter Auguste Maquet.",
@@ -76,7 +100,7 @@
     "comments": []
   },
   {
-    "id": 5,
+    "id": "5",
     "name": "Romeo and Juliet",
     "author": "William Shakespeare",
     "description": "Romeo and Juliet is a tragedy written by William Shakespeare early in his career about two young star-crossed lovers whose deaths ultimately reconcile their feuding families. It was among Shakespeare's most popular plays during his lifetime and, along with Hamlet, is one of his most frequently performed plays.",
@@ -88,7 +112,7 @@
     "comments": []
   },
   {
-    "id": 6,
+    "id": "6",
     "name": "Harry Potter and the Philosopher's Stone",
     "author": "J.K. Rowling",
     "description": "Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry.",
@@ -119,7 +143,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": "7",
     "name": "1984",
     "author": "George Orwell",
     "description": "1984 is a dystopian social science fiction novel by English novelist George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime. Thematically, 1984 centres on the consequences of totalitarianism, mass surveillance, and repressive regimentation of persons and behaviours within society.",
@@ -128,10 +152,17 @@
       "Dystopian",
       "Science Fiction"
     ],
-    "comments": []
+    "comments": [
+      {
+        "comment": "my friend read this book long time ago",
+        "email": "skuukzky@gmail.com",
+        "id": "bdd8fddb-e162-4cc8-843c-eb11323703ae",
+        "likes": 0
+      }
+    ]
   },
   {
-    "id": 8,
+    "id": "8",
     "name": "Pride and Prejudice",
     "author": "Jane Austen",
     "description": "Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness.",
@@ -143,7 +174,7 @@
     "comments": []
   },
   {
-    "id": 9,
+    "id": "9",
     "name": "Rich Dad Poor Dad",
     "author": "Robert T. Kiyosaki",
     "description": "Rich Dad Poor Dad is a 1997 book written by Robert Kiyosaki and Sharon Lechter. It advocates the importance of financial literacy, financial independence and building wealth through investing in assets, real estate investing, starting and owning businesses, as well as increasing one's financial intelligence to improve one's business and financial aptitude.",
@@ -155,7 +186,7 @@
     "comments": []
   },
   {
-    "id": 10,
+    "id": "10",
     "name": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "description": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.",

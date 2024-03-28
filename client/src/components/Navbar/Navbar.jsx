@@ -23,18 +23,7 @@ function Navbar() {
 
     useEffect(() => {
         document.body.className = theme ? "dark" : "light";
-    }, [theme]);
-
-
-    const [profile, setProfile] = useState(currentUser?.firstName?.charAt(0).toUpperCase());
-
-    const handleMouseOver = () => {
-        setProfile(currentUser?.firstName);
-    }
-
-    const handleMouseLeave = () => {
-        setProfile(currentUser?.firstName?.charAt(0).toUpperCase());
-    }
+    }, [theme]);    
 
     return (
         <>
@@ -42,24 +31,28 @@ function Navbar() {
                 <NavLink to="/" className="link">
                     <h1>BookReview</h1>
                 </NavLink>
+
                 <div>
                     <form>
                         <input onChange={handleSearch} type="search" placeholder="Search..." />
                     </form>
                 </div>
+                
                 <div className="navbar-right flex align-center g-3">
                     <NavLink to="/books" className="link">
                         Books
                     </NavLink>
 
                     {currentUser ? (
-                        <div onClick={() => setDropdown(!drowdown)} style={{backgroundColor: currentUser.profileColor}} className="profile flex align-center justify-center">
-                            <h2 onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>{profile}</h2>
+                        <div 
+                            onClick={() => setDropdown(!drowdown)} 
+                            style={{backgroundColor: currentUser.profileColor}} 
+                            className="profile flex align-center justify-center"
+                        >
                             
-                            {drowdown 
-                            ? <ProfileDropDown />
-                            : null
-                            }
+                            <h2>{currentUser?.firstName?.charAt(0).toUpperCase()}</h2>
+                            
+                            {drowdown ? <ProfileDropDown /> : null}
 
                         </div>
                     )

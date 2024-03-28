@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import UserContextProvider from "./context/UserContext";
 import BookContextProvider from "./context/BookContext";
@@ -17,15 +17,17 @@ function App() {
             <ThemeProvider>
                 <UserContextProvider>
                     <BookContextProvider>
-                        <Routes>
-                            <Route path="/signin" element={<Signin />} />
-                            <Route path="/signup" element={<Signup />} />
-                            <Route element={<ProtectedRoutes />}>
-                                <Route path="/" element={<Home />} />
-                                <Route path="/books" element={<Books />} />
-                                <Route path="/books/:id" element={<Book />} />
-                            </Route>
-                        </Routes>
+                        <Suspense fallback={<h1>Loading...</h1>}>
+                            <Routes>
+                                <Route exact path="/signin" element={<Signin />} />
+                                <Route exact path="/signup" element={<Signup />} />
+                                <Route element={<ProtectedRoutes />}>
+                                    <Route exact path="/" element={<Home />} />
+                                    <Route exact path="/books" element={<Books />} />
+                                    <Route exact path="/books/:id" element={<Book />} />
+                                </Route>
+                            </Routes>
+                        </Suspense>
                     </BookContextProvider>
                 </UserContextProvider>
             </ThemeProvider>
