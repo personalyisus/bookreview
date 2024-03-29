@@ -12,7 +12,7 @@ function CommentCard({ comment, handleLike }) {
             <div>
                 <p className="flex align-center g-1">
                     <button onClick={() => handleLike(comment.id)} className="btn-like">Like</button>
-                    {comment.likes}
+                    {comment.likes.length}
                 </p>
             </div>
         </div>      

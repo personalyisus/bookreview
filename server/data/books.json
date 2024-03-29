@@ -14,7 +14,11 @@
         "id": "ghoe93341mdewlo",
         "email": "robert@gmail.com",
         "comment": "This book is amazing. I have learned so much from it.",
-        "likes": 6
+        "likes": [
+          "1",
+          "2",
+          "3"
+        ]
       }
     ]
   },
@@ -29,7 +33,16 @@
       "Adventure",
       "Epic"
     ],
-    "comments": []
+    "comments": [
+      {
+        "comment": "This is a test comment",
+        "email": "robert@gmail.com",
+        "id": "d32f0ff9-7853-422a-b76e-0bc775458ad2",
+        "likes": [
+          "1"
+        ]
+      }
+    ]
   },
   {
     "id": "3",

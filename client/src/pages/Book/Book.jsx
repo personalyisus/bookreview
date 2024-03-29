@@ -49,32 +49,27 @@ function Book() {
     }
 
 
-
-
-    const [liked, setLiked] = useState(false);
-
-    const handleLike = async (id) => {
-        let comment = book.comments.find(comment => comment.id === id);
-        console.log(comment)
-
-        if (liked) {
-            setLiked(false);
-            comment.likes--;
-        }
-        else {
-            setLiked(true);
-            comment.likes++;
-        }
-
-        const res = await fetch(`http://localhost:5000/books/${book.id}/comments/${id}`, {
+    const handleLike = async (commentId) => {
+        const res = await fetch(`http://localhost:5000/books/${book.id}/comments/${commentId}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ likes: comment.likes })
+            body: JSON.stringify({ userId: currentUser.id })
         });
 
         if (!res.ok) {
             console.error("Error:", res.statusText);
         }
+        
+      const resData = await res.json();
+
+        setBook(bookData =>{
+          return {...bookData, comments:bookData.comments.map(comment=> {
+            if(comment.id === resData.id){
+              return resData;
+            }
+            return comment
+          })}
+        });
     }
 
 

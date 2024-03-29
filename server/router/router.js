@@ -27,7 +27,7 @@ router.get("/books/:id", (req, res) => {
 router.post("/books/:id", (req, res) => {
     const newComment = req.body;
     const id = req.params.id;
-    const comment = { ...newComment, id: uuidv4(), likes: 0 };
+    const comment = { ...newComment, id: uuidv4(), likes: [] };
     
     let book = books.find(book => book.id === id);
 
@@ -109,9 +109,9 @@ router.post("/signout", (req, res) => {
 
 router.put("/books/:bookId/comments/:commentId", (req, res) => {
     const { bookId, commentId } = req.params;
-    const { likes } = req.body;
+    const { userId } = req.body;
 
-    console.log(bookId, commentId, likes)
+    console.log(bookId, commentId, userId)
 
     let book = books.find(book => book.id === bookId);
     if (!book) {
@@ -125,7 +125,9 @@ router.put("/books/:bookId/comments/:commentId", (req, res) => {
         return;
     }
 
-    comment.likes = likes;
+    const userAlreadyLiked = comment.likes.find(likeUserId => likeUserId === userId);
+    comment.likes =  userAlreadyLiked ? comment.likes.filter(likeUserId => likeUserId !== userId) : comment.likes.concat(userId);
+
 
     fs.writeFile(path.join(__dirname, "../data/books.json"), JSON.stringify(books, null, 2), (err) => {
         if (err) {
